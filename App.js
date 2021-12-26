@@ -1,11 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import Greating from './src/components/Greating';
 
 export default function App() {
+  const names = ['Cristian', 'Alejandra'];
   return (
     <View style={styles.container}>
-      <Text>Hello world, Let's get started!</Text>
-      <StatusBar style="auto" />
+      {names.map((name) => {
+        return (<Greating name={name}/>)
+      })}
     </View>
   );
 }
