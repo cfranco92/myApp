@@ -6,7 +6,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       {names.map((person) => {
-        return (<Greating firstName={person.firstName} lastName={person.lastName}/>)
+        return (<Greating firstName={person.firstName} lastName={person.lastName} key={Math.random()}/>)
       })}
     </View>
   );
