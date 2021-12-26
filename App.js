@@ -2,11 +2,11 @@ import { StyleSheet, Text, View } from 'react-native';
 import Greating from './src/components/Greating';
 
 export default function App() {
-  const names = ['Cristian', 'Alejandra'];
+  const names = [{firstName: 'Cristian', lastName: 'Franco'}, { firstName: 'Alejandra', lastName: 'Bertón'}, { firstName: 'Alejandro'}];
   return (
     <View style={styles.container}>
-      {names.map((name) => {
-        return (<Greating name={name}/>)
+      {names.map((person) => {
+        return (<Greating firstName={person.firstName} lastName={person.lastName}/>)
       })}
     </View>
   );
